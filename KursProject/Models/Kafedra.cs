@@ -8,7 +8,6 @@ namespace test.Models
 {
     public class Kafedra
     {
-
         public int KafedraID { get; set; }
         public string Name { get; set; }
         public int FacultID { get; set; }
