@@ -1,0 +1,69 @@
+﻿@model IEnumerable<KursProject.Models.Discipline>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Prepods.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KolichPract)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KolichLab)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kurs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Semestr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VidOtchet)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prepods.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KolichPract)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KolichLab)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kurs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Semestr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VidOtchet)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DisciplineID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DisciplineID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DisciplineID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,74 @@
+﻿@model KursProject.Models.Discipline
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Discipline</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Prepods.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prepods.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KolichPract)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KolichPract)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KolichLab)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KolichLab)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kurs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kurs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Semestr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Semestr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VidOtchet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VidOtchet)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DisciplineID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
